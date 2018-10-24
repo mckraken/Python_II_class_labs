@@ -67,8 +67,8 @@ while len(queue) > 0:
 loop_time = datetime.utcnow() - start_loop
 print(f'{num_items} iterations of deque append/popleft took {loop_time}')
 
-getrandbits(7)
-
+# getrandbits(7)
+#
 # 200000 iterations of stack append/pop took 0:00:00.087298
 # 200000 iterations of queue insert/pop took 0:00:08.234231
 # 200000 iterations of queue append/pop(0) took 0:00:04.681073
