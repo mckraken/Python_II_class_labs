@@ -4,7 +4,7 @@ import os
 
 from datetime import datetime, time, date
 
-file_dir = "~/training/ru-python/python_02/class_data/"
+file_dir = "../class_data/"
 file_name = "tmpprecip2012.dat"
 full_file_w_path = file_dir + file_name
 precip_days = 0
@@ -34,7 +34,7 @@ with open(os.path.expanduser(full_file_w_path), 'r') as f:
             min_high_temp_day = day_of_year
         if precip > 0:
             precip_total += precip
-            precip_days +=1
+            precip_days += 1
             if precip > max_precip:
                 max_precip = precip
                 max_precip_day = day_of_year

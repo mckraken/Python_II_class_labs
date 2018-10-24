@@ -1,8 +1,5 @@
-
-
 #! /usr/bin/env python
 
-import os
 from random import randint
 
 num_dups = list()
@@ -16,7 +13,6 @@ for n in range(0, num_trys):
         birthday_list.append(randint(1, 365))
 
     birthday_set = set(birthday_list)
-
     num_dups.append(len(birthday_list) - len(birthday_set))
 
 count = len([x for x in num_dups if x > 0])

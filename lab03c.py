@@ -1,9 +1,8 @@
 #! /usr/bin/env python
 
 import os
-import string
 
-file_dir = "~/training/ru-python/python_02/class_data/"
+file_dir = "../class_data/"
 file_name = "trees.dat"
 full_file_w_path = file_dir + file_name
 tree_heights = list()

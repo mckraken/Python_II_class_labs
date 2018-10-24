@@ -1,13 +1,13 @@
 #! /usr/bin/env python
 
 import os
-alice_file_dir = "~/training/ru-python/python_02/class_data/"
-alice_file = "alice_in_wonderland.dat"
-full_file_w_path = alice_file_dir + alice_file
+file_dir = "../class_data/"
+file_name = "alice_in_wonderland.dat"
+full_file_w_path = file_dir + file_name
 total_characters = 0
 total_letters = 0
-uppercase_letters = range(65,91)
-lowercase_letters = range(97,123)
+uppercase_letters = range(65, 91)
+lowercase_letters = range(97, 123)
 
 with open(os.path.expanduser(full_file_w_path), 'r') as f:
 
@@ -17,7 +17,7 @@ with open(os.path.expanduser(full_file_w_path), 'r') as f:
             key = str(ord(char))
             total_characters += 1
             if ord(char) in uppercase_letters or ord(char) in lowercase_letters:
-                total_letters +=1
+                total_letters += 1
             if key in letter_count:
                 letter_count[key] += 1
             else:

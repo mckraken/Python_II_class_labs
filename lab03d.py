@@ -1,8 +1,5 @@
-
-
 #! /usr/bin/env python
 
-import os
 from random import randint
 
 # birthday_list = list()
@@ -28,8 +25,3 @@ count = len(num_dups) - num_dups.count(0)
 print('\n')
 print(f'Maximum number of duplicates found: {max(num_dups)}')
 print(f'{count} times duplicates found out of {num_trys} samples (average; {count/num_trys:.2%})')
-
-
-
-
-
