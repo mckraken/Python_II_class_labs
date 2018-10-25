@@ -5,10 +5,12 @@ from random import randint
 num_rolls = 100000
 accum_rolls = 12 * [0]
 
+
 def roll_dice():
     roll = randint(1, 6) + randint(1, 6)
     print(roll, end=" ")
     return roll
+
 
 cash = max_cash = 100
 turns = 0
@@ -35,4 +37,5 @@ while cash > 0:
                 cash += 10
                 print(f"\nYou win!! Cash = ${cash}!")
                 break
-print(f'It took {turns} turns to run out of money.  The maximum cash you had was: ${max_cash}')
+print(f'It took {turns} turns to run out of money.  '
+      f'The maximum cash you had was: ${max_cash}')

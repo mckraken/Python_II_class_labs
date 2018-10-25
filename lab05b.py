@@ -17,11 +17,13 @@ def fahrenheit_to_centigrade(*args):
         try:
             fdeg = float(item)
         except ValueError:
-            print(f'{item} ({type(item)}) is not valid for conversion', file=stderr)
+            print(f'{item} ({type(item)}) is not valid for conversion',
+                  file=stderr)
             continue
 
         cdeg = 5 / 9 * (float(fdeg) - 32)
-        print(f'{float(fdeg):>7.1f} degrees Fahrenheit is {cdeg:>7.1f} degrees Centigrade')
+        print(f'{float(fdeg):>7.1f} degrees Fahrenheit is '
+              f'{cdeg:>7.1f} degrees Centigrade')
 
 
 fahrenheit_to_centigrade(*argv[1:])

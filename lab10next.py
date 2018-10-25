@@ -16,8 +16,12 @@ with open(os.path.expanduser(file_dir + dictionary_fn), 'r') as f:
 alice_words = []
 with open(os.path.expanduser(file_dir + alice_fn), 'r') as f:
     for raw_line in f:
-        tmp_line = raw_line.translate({ord("'"): "", ord('-'): ' '}).lower().strip()
-        line = tmp_line.translate({ord(c): None for c in string.punctuation})
+        tmp_line = raw_line.translate(
+            {ord("'"): "", ord('-'): ' '}
+        ).lower().strip()
+        line = tmp_line.translate(
+            {ord(c): None for c in string.punctuation}
+        )
         alice_words.extend(line.split())
 
 alice_words_set = set(alice_words)
@@ -34,8 +38,10 @@ print()
 print(f'Total words in English dictionary we used: {len(words)}')
 print(f'Total words in book: {len(alice_words):>7n}')
 print(f'Total unique words in book: {len(alice_words_set)}')
-print(f'Percentage of English words used in book: {len(alice_words_set)/len(words):6.2%}')
-print(f'The word "{ordered_words[-1][1]}" is the most frequently used with {ordered_words[-1][0]} occurances.')
+print(f'Percentage of English words used in book: '
+      f'{len(alice_words_set)/len(words):6.2%}')
+print(f'The word "{ordered_words[-1][1]}" is the most frequently used with '
+      f'{ordered_words[-1][0]} occurances.')
 print(f'The {len(words_unk)} words not found in the dictionary are:')
 print()
 n = 0
@@ -45,6 +51,4 @@ for w in sorted(words_unk):
     if n >= 6:
         print()
         n = 0
-
 print()
-

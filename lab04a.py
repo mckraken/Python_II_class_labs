@@ -3,7 +3,6 @@
 Stacks and Queues
 """
 from random import randrange
-from datetime import datetime
 from collections import deque
 
 num_items = 5

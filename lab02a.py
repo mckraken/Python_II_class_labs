@@ -29,5 +29,7 @@ case_insensitive_e = letter_count[str(ord("E"))] + letter_count[str(ord("e"))]
 print(f'Total "e" and "E" {case_insensitive_e}')
 print(f'Total Characters {total_characters}')
 print(f'Total Letters {total_letters}')
-print(f'case insensitive "e" percentage of characters: {case_insensitive_e/total_characters:.2%}')
-print(f'case insensitive "e" percentage of letters {case_insensitive_e/total_letters:.2%}')
+print(f'case insensitive "e" percentage of characters:'
+      f' {case_insensitive_e/total_characters:.2%}')
+print(f'case insensitive "e" percentage of letters '
+      f'{case_insensitive_e/total_letters:.2%}')

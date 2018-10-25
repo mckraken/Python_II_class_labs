@@ -4,7 +4,7 @@ import os
 from datetime import date
 
 file_dir = "../class_data/"
-file_name = "tmpprecip2012.dat"
+# file_name = "tmpprecip2012.dat"
 file_name = "tmpprecip.dat"
 full_file_w_path = file_dir + file_name
 precip_days = 0

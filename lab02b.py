@@ -2,7 +2,7 @@
 
 import os
 
-from datetime import datetime, time, date
+from datetime import date
 
 file_dir = "../class_data/"
 file_name = "tmpprecip2012.dat"
@@ -42,6 +42,8 @@ with open(os.path.expanduser(full_file_w_path), 'r') as f:
 print('\n')
 print(f'Total precipitation: {precip_total:.2f} across {precip_days} days')
 print(f'Max. precipitation: {max_precip:.2f} on {max_precip_day.isoformat()}')
-print(f'Max. temperature in year: {max_high_temp:.0f} on {max_high_temp_day.isoformat()}')
-print(f'Min. temperature in year: {min_high_temp:.0f} on {min_high_temp_day.isoformat()}')
+print(f'Max. temperature in year: {max_high_temp:.0f} on '
+      f'{max_high_temp_day.isoformat()}')
+print(f'Min. temperature in year: {min_high_temp:.0f} on '
+      f'{min_high_temp_day.isoformat()}')
 print('\n')

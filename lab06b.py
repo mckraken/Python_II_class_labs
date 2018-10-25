@@ -19,4 +19,5 @@ count = len([x for x in num_dups if x > 0])
 
 print('\n')
 print(f'Maximum number of duplicates found: {max(num_dups)}')
-print(f'{count} times duplicates found out of {num_trys} samples (average; {count/num_trys:.2%})')
+print(f'{count} times duplicates found out of {num_trys} samples'
+      f' (average; {count/num_trys:.2%})')
