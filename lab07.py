@@ -13,7 +13,7 @@ lowercase_letters = range(97, 123)
 
 def read_file_to_set(fn):
     with open(os.path.expanduser(file_dir + fn), 'r') as f:
-        return set(f.readlines())
+        return set([i.strip() for i in f.readlines()])
 
 
 servers = read_file_to_set(file_name_servers)
@@ -31,5 +31,7 @@ print(f'There are {len(missing)} updates that are actually additions: {missing}'
 print(f'There are {len(no_updates)} servers without updates: {no_updates}')
 print(f'There are {len(new_updates)} servers to update: {new_updates}')
 
+# Use list comprehension to append a newline to each item in the no_updates set
+# as we stripped them on reading each line item initially
 with open(os.path.expanduser(file_dir + file_name_no_updates), 'w') as f:
-    f.writelines(no_updates)
+    f.writelines([s + '\n' for s in no_updates])
