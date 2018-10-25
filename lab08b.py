@@ -11,8 +11,11 @@ word_lst = set()
 num_words = 0
 with open(os.path.expanduser(file_dir + fn), 'r') as f:
     for line_w_punct in f:
+        # replace punctuation with space character rather than
+        # deleting it so "amazon.com" becomes "amazon" and "com"
+        # rather than "amazoncom"
         line = line_w_punct.strip().translate(
-            {ord(c): None for c in punctuation}).lower()
+            {ord(c): ' ' for c in punctuation}).lower()
         words_in_line = line.split()
         num_words += len(words_in_line)
         word_lst.update(words_in_line)
